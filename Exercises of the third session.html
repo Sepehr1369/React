@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            کلاس اول
+        </title>
+        <style>
+            body {background-color: powderblue;}
+            h1   {color: blue;text-align: center;}
+            p    {color: red;}
+            table,
+                tr,    
+                td 
+                {
+                    border-color: #00f020;
+                    padding-top: 10px;
+                    padding-bottom: 20px;
+                    padding-left: 30px;
+                    padding-right: 40px;
+                    text-align: center;
+                    
+                }
+        </style>
+        <script>
+            function kamel()
+            {
+                var sum = 0;
+                var input = document.getElementById('kamel_txt').value;
+                for (var i = 1; i < input; i++) {
+                    if (input % i == 0) {
+                        sum = sum + i;
+                    }
+                }
+                if (input == sum)
+                {
+                    document.getElementById("kamel").style.color="Green";
+                    document.getElementById("kamel").innerHTML ="عدد کامل است✓";
+                }
+                else
+                {
+                    document.getElementById("kamel").style.color="red";
+                    document.getElementById("kamel").innerHTML ="عدد کامل نیست✖";
+                }
+                    
+            }
+            function kamel_reset()
+            {
+                document.getElementById("kamel").innerHTML = "عدد کامل";
+                document.getElementById('kamel_txt').value="";
+                document.getElementById("kamel").style.color="Blue";
+            }
+            //---------------------------------------------------------//
+            function bmm()
+            {
+                var i;
+                var a = document.getElementById('bmm_a_txt').value;
+                var b = document.getElementById('bmm_b_txt').value;
+                if (a > b)
+                    i = a;
+                else
+                    i = b;
+                while ((a % i != 0) || (b % i != 0)) {i--;}    
+                document.getElementById("bmm").innerHTML = "ب م م " + i;
+            }
+            function bmm_reset()
+            {
+                document.getElementById("bmm").innerHTML = "ب م م";
+                document.getElementById('bmm_a_txt').value="";
+                document.getElementById('bmm_b_txt').value="";
+            }
+            //---------------------------------------------------------//
+            function ghaem()
+            {
+                var a = document.getElementById('ghaem_a_txt').value;
+                var b = document.getElementById('ghaem_b_txt').value;
+                var c = document.getElementById('ghaem_c_txt').value;
+                if ((a*a==b*b+c*c)||(b*b==a*a+c*c)||(c*c==a*a+b*b))
+                {
+                    document.getElementById("ghaem").style.color="Green";
+                    document.getElementById("ghaem").innerHTML = "مثلث قائم الزاویه است✓";
+                }   
+                else
+                 {
+                     document.getElementById("ghaem").style.color="Red";
+                     document.getElementById("ghaem").innerHTML = "قائم الزاویه نیست✖";
+                 }
+            }
+            function ghaem_reset()
+            {
+                document.getElementById("ghaem").style.color="Red";
+                document.getElementById("ghaem").innerHTML = "قائم الزاویه";ghaem_a_txt
+                document.getElementById('ghaem_a_txt').value="";
+                document.getElementById('ghaem_b_txt').value="";
+                document.getElementById('ghaem_c_txt').value="";
+            }
+            //---------------------------------------------------------//
+            function c_to_f()
+            {
+                var a = document.getElementById('c_to_f_txt').value;
+                document.getElementById("c_to_f").innerHTML =" فارنهایت :"+ (a*9/5+32);
+            }
+            function c_to_f_reset()
+            {
+                document.getElementById('c_to_f_txt').value="";
+                document.getElementById("c_to_f").innerHTML = "سانتی گراد به فارنهایت";
+            }
+            //---------------------------------------------------------//
+            function Daraje2()
+            {
+                var a = document.getElementById('Daraje2_a_txt').value;
+                var b = document.getElementById('Daraje2_b_txt').value;
+                var c = document.getElementById('Daraje2_c_txt').value;
+                var delta = b * b - 4 * a * c;
+                if (delta > 0) 
+                {
+                    var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                    var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                    document.getElementById("Daraje2").innerHTML = "x1 : "+  (x1 +"").substring (0, 5) + "   x2 : " + (x2+"").substring(0,5);
+                }
+                else if (delta == 0) 
+                {
+                    x1 = -b / (2 * a);
+                    document.getElementById("Daraje2").innerHTML ="x1= " + (x1 + ""). substring (0, 3);
+                }
+                else if (delta < 0)
+                {
+                    document.getElementById("Daraje2").innerHTML ="ریشه ندارد";
+                }
+                
+            }
+            function Daraje2_reset()
+            {
+                document.getElementById('Daraje2_a_txt').value="";
+                document.getElementById('Daraje2_b_txt').value="";
+                document.getElementById('Daraje2_c_txt').value="";
+                document.getElementById("Daraje2").innerHTML = "ضرائب معادله درجه 2";
+            }
+            //---------------------------------------------------------//
+            function mmd()
+            {
+                var mo,ms;
+                var r=document.getElementById('mmd_txt').value;
+                mo=r*3.14*2;
+                ms=3.14*r*r;
+                document.getElementById("mmd").innerHTML = "محیط : " + mo +"مساحت : " + ms;
+            }
+            function mmd_reset()
+            {
+                document.getElementById('mmd_txt').value="";
+                document.getElementById("mmd").innerHTML = "محیط و مساحت دایره";
+            }
+            //---------------------------------------------------------//
+            function p1()
+            {
+                document.getElementById("p1").innerHTML = "جواب";
+            }
+            function p1_reset(){document.getElementById("p1").innerHTML = "شخصی اول";}
+            //---------------------------------------------------------//
+            function p2()
+            {
+                document.getElementById("p2").innerHTML = "جواب";
+            }
+            function p2_reset(){document.getElementById("p2").innerHTML = "ضخصی دوم	";}
+            //---------------------------------------------------------//
+            function p3()
+            {
+                document.getElementById("p3").innerHTML = "جواب";
+            }
+            function p3_reset(){document.getElementById("p3").innerHTML = "شخصی سوم";}
+            //---------------------------------------------------------//
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>تمرینات جلسه سوم</h1>
+        </div>
+        <div>
+            <table border="1" style="width:100% ; border-radius: 10px;border: 1px solid rgb(219, 25, 25);">
+                <tr>
+                  <td>
+                    <p id="kamel" style="border-style: dashed;color: blue;" >عدد کامل</p>
+                    <p>
+                         <input type="number" style="width: 110px;"  placeholder="Enter Number" min="-100" max="100" id="kamel_txt" name="kamel_txt" ></br></br>
+                         <button onclick="kamel();">حل مسئله</button>
+                         <button onclick="kamel_reset();">بازنشانی</button>
+                     </p>
+                  </td>
+                  <td>               
+                        <p id="bmm" style="border-style: dashed;color: rgb(60, 175, 85);">ب م م</p>
+                        <p>
+                            <input type="number" style="width: 60px;" placeholder="Enter a" min="-100" max="100" id="bmm_a_txt" name="bmm_a_txt" >
+                            <input type="number" style="width: 60px;" placeholder="Enter b" min="-100" max="100" id="bmm_b_txt" name="bmm_b_txt" ></br></br>
+                            <button onclick="bmm();">حل مسئله</button>
+                            <button onclick="bmm_reset();">بازنشانی</button>
+                        </p>
+                  </td>
+                  <td>
+                    <p id="ghaem" style="border-style: dashed;color: rgb(230, 51, 20);">قائم الزاویه</p>
+                    <p>
+                        <input type="number" style="width: 40px;" placeholder="A" min="-100" max="100" id="ghaem_a_txt" name="ghaem_a_txt" >
+                        <input type="number" style="width: 40px;" placeholder="B" min="-100" max="100" id="ghaem_b_txt" name="ghaem_b_txt" >
+                        <input type="number" style="width: 40px;" placeholder="C" min="-100" max="100" id="ghaem_c_txt" name="ghaem_c_txt" ></br></br>
+                        <button onclick="ghaem();">حل مسئله</button>
+                        <button onclick="ghaem_reset();">بازنشانی</button>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p id="c_to_f">سانتی گراد به فارنهایت</p>
+                    <p>
+                        <input type="number" style="width: 110px;"  placeholder="Enter Number" min="-100" max="100" id="c_to_f_txt" name="c_to_f_txt" ></br></br>
+                        <button onclick="c_to_f();">حل مسئله</button>
+                        <button onclick="c_to_f_reset();">بازنشانی</button>
+                    </p>
+                  </td>
+                  <td>
+                        <p id="Daraje2">ضرائب معادله درجه 2</p>
+                        <p>
+                            <input type="number" style="width: 40px;" placeholder="A" min="-100" max="100" id="Daraje2_a_txt" name="Daraje2_a_txt" >
+                            <input type="number" style="width: 40px;" placeholder="B" min="-100" max="100" id="Daraje2_b_txt" name="Daraje2_b_txt" >
+                            <input type="number" style="width: 40px;" placeholder="C" min="-100" max="100" id="Daraje2_c_txt" name="Daraje2_c_txt" ></br></br>
+                            <button onclick="Daraje2();">حل مسئله</button>
+                            <button onclick="Daraje2_reset();">بازنشانی</button>
+                        </p>
+                  </td>
+                  <td>
+                        <p id="mmd">محیط و مساحت دایره</p>
+                        <p>
+                            <input type="number" style="width: 120px;" placeholder="شعاع" min="-100" max="100" id="mmd_txt" name="mmd_txt" ></br></br>
+                            <button onclick="mmd();">حل مسئله</button>
+                            <button onclick="mmd_reset();">بازنشانی</button>
+                        </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                        <p id="p1">شخصی اول</p>
+                        <p>
+                            <button onclick="p1();">حل مسئله</button>
+                            <button onclick="p1_reset();">بازنشانی</button>
+                        </p>
+                  </td>
+                  <td>
+                        <p id="p2">شخصی دوم</p>
+                        <p>
+                            <button onclick="p2();">حل مسئله</button>
+                            <button onclick="p2_reset();">بازنشانی</button>
+                        </p>
+                  </td>
+                  <td>
+                        <p id="p3">شخصی سوم</p>
+                        <p>
+                            <button onclick="p3();">حل مسئله</button>
+                            <button onclick="p3_reset();">بازنشانی</button>
+                        </p>
+                  </td>
+                </tr>
+              </table>
+        </div>
+    </body>
+</html>
