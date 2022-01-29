@@ -56,9 +56,9 @@
                 var a = document.getElementById('bmm_a_txt').value;
                 var b = document.getElementById('bmm_b_txt').value;
                 if (a > b)
-                    i = a;
-                else
                     i = b;
+                else
+                    i = a;
                 while ((a % i != 0) || (b % i != 0)) {i--;}    
                 document.getElementById("bmm").innerHTML = "ب م م " + i;
             }
