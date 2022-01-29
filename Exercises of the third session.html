@@ -26,7 +26,7 @@
             {
                 var sum = 0;
                 var input = document.getElementById('kamel_txt').value;
-                for (var i = 1; i < input; i++) {
+                for (var i = 1; i < (input/2+1); i++) {
                     if (input % i == 0) {
                         sum = sum + i;
                     }
@@ -180,7 +180,7 @@
                   <td>
                     <p id="kamel" style="border-style: dashed;color: blue;" >عدد کامل</p>
                     <p>
-                         <input type="number" style="width: 110px;"  placeholder="Enter Number" min="-100" max="100" id="kamel_txt" name="kamel_txt" ></br></br>
+                         <input type="number" style="width: 110px;"  placeholder="Enter Number" min="-10" max="10" id="kamel_txt" name="kamel_txt" ></br></br>
                          <button onclick="kamel();">حل مسئله</button>
                          <button onclick="kamel_reset();">بازنشانی</button>
                      </p>
@@ -188,8 +188,8 @@
                   <td>               
                         <p id="bmm" style="border-style: dashed;color: rgb(60, 175, 85);">ب م م</p>
                         <p>
-                            <input type="number" style="width: 60px;" placeholder="Enter a" min="-100" max="100" id="bmm_a_txt" name="bmm_a_txt" >
-                            <input type="number" style="width: 60px;" placeholder="Enter b" min="-100" max="100" id="bmm_b_txt" name="bmm_b_txt" ></br></br>
+                            <input type="number" style="width: 60px;" placeholder="Enter a" min="-10" max="10" id="bmm_a_txt" name="bmm_a_txt" >
+                            <input type="number" style="width: 60px;" placeholder="Enter b" min="-10" max="10" id="bmm_b_txt" name="bmm_b_txt" ></br></br>
                             <button onclick="bmm();">حل مسئله</button>
                             <button onclick="bmm_reset();">بازنشانی</button>
                         </p>
@@ -197,9 +197,9 @@
                   <td>
                     <p id="ghaem" style="border-style: dashed;color: rgb(230, 51, 20);">قائم الزاویه</p>
                     <p>
-                        <input type="number" style="width: 40px;" placeholder="A" min="-100" max="100" id="ghaem_a_txt" name="ghaem_a_txt" >
-                        <input type="number" style="width: 40px;" placeholder="B" min="-100" max="100" id="ghaem_b_txt" name="ghaem_b_txt" >
-                        <input type="number" style="width: 40px;" placeholder="C" min="-100" max="100" id="ghaem_c_txt" name="ghaem_c_txt" ></br></br>
+                        <input type="number" style="width: 40px;" placeholder="A" min="-10" max="10" id="ghaem_a_txt" name="ghaem_a_txt" >
+                        <input type="number" style="width: 40px;" placeholder="B" min="-10" max="10" id="ghaem_b_txt" name="ghaem_b_txt" >
+                        <input type="number" style="width: 40px;" placeholder="C" min="-10" max="10" id="ghaem_c_txt" name="ghaem_c_txt" ></br></br>
                         <button onclick="ghaem();">حل مسئله</button>
                         <button onclick="ghaem_reset();">بازنشانی</button>
                     </p>
@@ -209,7 +209,7 @@
                   <td>
                     <p id="c_to_f">سانتی گراد به فارنهایت</p>
                     <p>
-                        <input type="number" style="width: 110px;"  placeholder="Enter Number" min="-100" max="100" id="c_to_f_txt" name="c_to_f_txt" ></br></br>
+                        <input type="number" style="width: 110px;"  placeholder="Enter Number" min="-10" max="10" id="c_to_f_txt" name="c_to_f_txt" ></br></br>
                         <button onclick="c_to_f();">حل مسئله</button>
                         <button onclick="c_to_f_reset();">بازنشانی</button>
                     </p>
@@ -217,9 +217,9 @@
                   <td>
                         <p id="Daraje2">ضرائب معادله درجه 2</p>
                         <p>
-                            <input type="number" style="width: 40px;" placeholder="A" min="-100" max="100" id="Daraje2_a_txt" name="Daraje2_a_txt" >
-                            <input type="number" style="width: 40px;" placeholder="B" min="-100" max="100" id="Daraje2_b_txt" name="Daraje2_b_txt" >
-                            <input type="number" style="width: 40px;" placeholder="C" min="-100" max="100" id="Daraje2_c_txt" name="Daraje2_c_txt" ></br></br>
+                            <input type="number" style="width: 40px;" placeholder="A" min="-10" max="10" id="Daraje2_a_txt" name="Daraje2_a_txt" >
+                            <input type="number" style="width: 40px;" placeholder="B" min="-10" max="10" id="Daraje2_b_txt" name="Daraje2_b_txt" >
+                            <input type="number" style="width: 40px;" placeholder="C" min="-10" max="10" id="Daraje2_c_txt" name="Daraje2_c_txt" ></br></br>
                             <button onclick="Daraje2();">حل مسئله</button>
                             <button onclick="Daraje2_reset();">بازنشانی</button>
                         </p>
@@ -227,7 +227,7 @@
                   <td>
                         <p id="mmd">محیط و مساحت دایره</p>
                         <p>
-                            <input type="number" style="width: 120px;" placeholder="شعاع" min="-100" max="100" id="mmd_txt" name="mmd_txt" ></br></br>
+                            <input type="number" style="width: 120px;" placeholder="شعاع" min="-10" max="10" id="mmd_txt" name="mmd_txt" ></br></br>
                             <button onclick="mmd();">حل مسئله</button>
                             <button onclick="mmd_reset();">بازنشانی</button>
                         </p>
