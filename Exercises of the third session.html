@@ -113,17 +113,18 @@
                 var a = document.getElementById('Daraje2_a_txt').value;
                 var b = document.getElementById('Daraje2_b_txt').value;
                 var c = document.getElementById('Daraje2_c_txt').value;
-                var delta = b * b - 4 * a * c;
+                var delta = (b * b) - (4 * a) * c;
                 if (delta > 0) 
                 {
+                    var test=Math.sqrt(delta);
                     var x1 = (-b + Math.sqrt(delta)) / (2 * a);
                     var x2 = (-b - Math.sqrt(delta)) / (2 * a);
-                    document.getElementById("Daraje2").innerHTML = "x1 : "+  (x1 +"").substring (0, 5) + "   x2 : " + (x2+"").substring(0,5);
+                    document.getElementById("Daraje2").innerHTML = "x1 : "+x1+ "</br>x2 : " + x2;
                 }
                 else if (delta == 0) 
                 {
                     x1 = -b / (2 * a);
-                    document.getElementById("Daraje2").innerHTML ="x1= " + (x1 + ""). substring (0, 3);
+                    document.getElementById("Daraje2").innerHTML ="x1= " +x1;
                 }
                 else if (delta < 0)
                 {
@@ -155,21 +156,60 @@
             //---------------------------------------------------------//
             function p1()
             {
-                document.getElementById("p1").innerHTML = "جواب";
+                var n= document.getElementById("p1_txt").value;
+                var count=0;
+                while(n>0)
+                {
+                    count++;
+                    if(n<10)break;
+                    n=n/10;
+                }
+                document.getElementById("p1").innerHTML = "تعداد ارقام عدد برابر است با :" +count;
             }
-            function p1_reset(){document.getElementById("p1").innerHTML = "شخصی اول";}
+            function p1_reset()
+            {
+                document.getElementById("p1_txt").value="";
+                document.getElementById("p1").innerHTML = "محاسبه تعداد ارقام";
+            }
             //---------------------------------------------------------//
             function p2()
             {
-                document.getElementById("p2").innerHTML = "جواب";
+                var n = document.getElementById("p2_txt").value;
+                var x = 0, y = 1, z = 0;
+                document.getElementById("p2").innerHTML="0\t1\t";
+                for (var i = 2; i < n; i++) 
+                {
+                    z = x + y;
+                    document.getElementById("p2").innerHTML=document.getElementById("p2").innerHTML + "\t" + z;
+                    x = y;
+                    y = z;
+                }
             }
-            function p2_reset(){document.getElementById("p2").innerHTML = "ضخصی دوم	";}
+            function p2_reset()
+            {
+                document.getElementById("p2_txt").value="";
+                document.getElementById("p2").innerHTML = "عدد فیبونانچیn";
+            }
             //---------------------------------------------------------//
             function p3()
             {
-                document.getElementById("p3").innerHTML = "جواب";
+                var n = document.getElementById("p3_txt").value;
+                document.getElementById("p3").innerHTML = "";
+                for(var i =0;i<=n;i++)
+                {
+                    for(var j=0;j<i;j++)
+                            document.getElementById("p3").innerHTML=document.getElementById("p3").innerHTML + "*";
+                    document.getElementById("p3").innerHTML=document.getElementById("p3").innerHTML + "</br>";
+                }
+                   
+                        
+                
             }
-            function p3_reset(){document.getElementById("p3").innerHTML = "شخصی سوم";}
+            function p3_reset()
+            {
+                document.getElementById("p3_txt").value="";
+                document.getElementById("p3").innerHTML = "چاپ مثلث";
+            }
             //---------------------------------------------------------//
         </script>
     </head>
@@ -178,10 +218,10 @@
             <h1>تمرینات جلسه سوم</h1>
         </div>
         <div>
-            <table border="1" style="width:100% ; border-radius: 10px;border: 1px solid rgb(219, 25, 25);">
+            <table border="1" style="width:100% ; border-radius: 30px;border: 1px solid rgb(219, 25, 25)">
                 <tr>
                   <td>
-                    <p id="kamel" style="border-style: dashed;color: blue;" >عدد کامل</p>
+                    <p id="kamel" style="border-style: dotted;color: blue;" >عدد کامل</p>
                     <p>
                          <input type="number" style="width: 110px;"  placeholder="Enter Number" min="-10" max="10" id="kamel_txt" name="kamel_txt" ></br></br>
                          <button onclick="kamel();">حل مسئله</button>
@@ -230,7 +270,7 @@
                   <td>
                         <p id="mmd">محیط و مساحت دایره</p>
                         <p>
-                            <input type="number" style="width: 120px;" placeholder="شعاع" min="-10" max="10" id="mmd_txt" name="mmd_txt" ></br></br>
+                            <input type="number" style="width: 120px;" placeholder="شعاع" min="0" max="10" id="mmd_txt" name="mmd_txt" ></br></br>
                             <button onclick="mmd();">حل مسئله</button>
                             <button onclick="mmd_reset();">بازنشانی</button>
                         </p>
@@ -238,22 +278,25 @@
                 </tr>
                 <tr>
                   <td>
-                        <p id="p1">شخصی اول</p>
+                        <p id="p1">محاسبه تعداد ارقام</p>
                         <p>
+                            <input type="number" style="width: 120px;" placeholder="عدد را وارد کنید" min="0" max="10" id="p1_txt" name="p1_txt" ></br></br>
                             <button onclick="p1();">حل مسئله</button>
                             <button onclick="p1_reset();">بازنشانی</button>
                         </p>
                   </td>
                   <td>
-                        <p id="p2">شخصی دوم</p>
+                        <p id="p2">عدد فیبونانچیn</p>
                         <p>
+                            <input type="number" style="width: 120px;" placeholder="عدد را وارد کنید" min="0" max="10" id="p2_txt" name="p2_txt" ></br></br>
                             <button onclick="p2();">حل مسئله</button>
                             <button onclick="p2_reset();">بازنشانی</button>
                         </p>
                   </td>
                   <td>
-                        <p id="p3">شخصی سوم</p>
+                        <p id="p3">چاپ مثلث</p>
                         <p>
+                            <input type="number" style="width: 120px;" placeholder="عدد را وارد کنید" min="0" max="10" id="p3_txt" name="p3_txt" ></br></br>
                             <button onclick="p3();">حل مسئله</button>
                             <button onclick="p3_reset();">بازنشانی</button>
                         </p>
