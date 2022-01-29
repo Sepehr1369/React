@@ -74,15 +74,18 @@
                 var a = document.getElementById('ghaem_a_txt').value;
                 var b = document.getElementById('ghaem_b_txt').value;
                 var c = document.getElementById('ghaem_c_txt').value;
-                if ((a*a==b*b+c*c)||(b*b==a*a+c*c)||(c*c==a*a+b*b))
+                var A=a*a;
+                var B=b*b;
+                var C=c*c;
+                if ((A==B+C)||(B==A+C)||(C==A+B))
                 {
                     document.getElementById("ghaem").style.color="Green";
-                    document.getElementById("ghaem").innerHTML = "مثلث قائم الزاویه است✓";
+                    document.getElementById("ghaem").innerHTML = "مثلث قائم الزاویه است✓"+ "</br>a2=b2+c2</br>" + A + "=" + B + "+" + C;;
                 }   
                 else
                  {
                      document.getElementById("ghaem").style.color="Red";
-                     document.getElementById("ghaem").innerHTML = "قائم الزاویه نیست✖";
+                     document.getElementById("ghaem").innerHTML = "قائم الزاویه نیست✖" + "</br>a2=b2+c2</br>" + A + "=" + B + "+" + C;
                  }
             }
             function ghaem_reset()
